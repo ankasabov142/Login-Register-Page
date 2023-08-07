@@ -13,7 +13,7 @@ transform: translateX(-100%);
   text-align: center;
   border-radius: 10px;
   width: 505px;
-  height: 400px;
+  height: 600px;
   background-color: $creamyWhite;
   h1 {
     color: black;
@@ -87,12 +87,25 @@ transform: translateX(-100%);
   }
 }
 
+
+#phone{
+  @include form;
+  margin-bottom: 15px;
+
+}
+#username{
+  @include form;
+  margin-bottom: 15px;
+
+}
 #email {
   @include form;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 #password {
   @include form;
+  margin-bottom: 15px;
+
 }
 
 .material-symbols-outlined {
