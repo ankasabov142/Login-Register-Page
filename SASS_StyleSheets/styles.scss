@@ -3,6 +3,50 @@
 body {
   background-image: url("/sources/macbookPhoto.jpg");
 }
+
+.register{
+  top: 30%;
+  left: 0%;
+transform: translateY(-30%);
+transform: translateX(-100%);
+  position: absolute;
+  text-align: center;
+  border-radius: 10px;
+  width: 505px;
+  height: 400px;
+  background-color: $creamyWhite;
+  h1 {
+    color: black;
+    @include font;
+  }
+
+  p {
+    color: black;
+    @include font;
+  }
+  #loginAnchor {
+    position: absolute;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 5px;
+    transition: all 0.3s linear;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    border: none;
+    background: none;
+    color: purple;
+    @include font;
+    &:hover {
+      transform: translate(-50%, -40%);
+      transition: all 0.3s linear;
+    }
+  }
+
+}
+
+
+
 .login {
   top: 30%;
   left: 50%;
@@ -19,12 +63,11 @@ body {
     @include font;
   }
 
-  p{
+  p {
     color: black;
     @include font;
-    
   }
-  a{
+  #registerAnchor {
     position: absolute;
     cursor: pointer;
     text-decoration: none;
@@ -32,9 +75,13 @@ body {
     transition: all 0.3s linear;
     left: 50%;
     transform: translateX(-50%);
-@include font;
-    &:hover{
-      transform: translate(-50%,-40%);
+    font-size: 18px;
+    border: none;
+    background: none;
+    color: purple;
+    @include font;
+    &:hover {
+      transform: translate(-50%, -40%);
       transition: all 0.3s linear;
     }
   }
@@ -57,7 +104,7 @@ body {
 
 #btn {
   @include button;
-  
+
   .btn-ripple {
     background: rgba(255, 255, 255, 0.3);
     position: absolute;
@@ -77,3 +124,67 @@ body {
   @include font;
   font-size: 15px;
 }
+
+.slideLeft {
+  animation-name: slide-left;
+  animation-duration: 2s;
+  /* Preserve the effect of the animation at ending */
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    top: 30%;
+    left: 50%;
+    transform: translateY(-30%);
+    transform: translateX(-50%);
+  }
+  100%{
+    top: 30%;
+    left: 0%;
+  transform: translateY(-30%);
+  transform: translateX(-100%);
+  }
+}
+
+.slideRight {
+  animation-name: slide-right;
+  animation-duration: 2s;
+  /* Preserve the effect of the animation at ending */
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-right {
+  0% {
+    top: 30%;
+    left: 0%;
+  transform: translateY(-30%);
+  transform: translateX(-100%);
+  }
+  100%{
+    top: 30%;
+    left: 50%;
+    transform: translateY(-30%);
+    transform: translateX(-50%);
+    
+  }
+}
+// top: 30%;
+//   left: 50%;
+//   transform: translateY(-30%);
+//   transform: translateX(-50%);
+//   position: absolute;
+//   text-align: center;
+//   border-radius: 10px;
+//   width: 505px;
+//   height: 400px;
+//   background-color: $creamyWhite;
+//   h1 {
+//     color: black;
+//     @include font;
+//   }
+
+//   p {
+//     color: black;
+//     @include font;
+//   }
