@@ -1,3 +1,34 @@
+$(function () {
+  function RippleStyle(width, height, posX, posY) {
+    this.width = width <= height ? height : width;
+    this.height = width <= height ? height : width;
+    this.top = posY - this.height * 0.5;
+    this.left = posX - this.width * 0.5;
+  }
+
+  $("#btn").click(function (e) {
+    let rippleEl = $(`<span class="btn-ripple"></span>`).appendTo(this);
+    let pos = $(this).offset();
+    var width =100
+    var height = 100
+
+    var posX = e.pageX -510
+    var posY = e.pageY - 220;
+
+    var rippleStyle = new RippleStyle(width, height, posX, posY);
+
+    rippleEl.css(rippleStyle);
+  });
+
+  $("#.btn").on(
+    "animationed webkitAnimationEnd oanimationend MSAnimationEnd",
+    ".btn-ripple",
+    function () {
+      $(this).remove();
+    }
+  );
+});
+
 const firebaseConfig = {
   apiKey: "AIzaSyDhZy4GB1EZua0_Ha2NIwNiHuuauLmrGNE",
 

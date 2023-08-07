@@ -1,42 +1,59 @@
 @import "variables";
 
-
-body{
-background-image: url('/sources/macbookPhoto.jpg');
-
+body {
+  background-image: url("/sources/macbookPhoto.jpg");
 }
-.login{
-    top: 30%;
-    left: 50%;
-    transform: translateY(-30%);
-    transform: translateX(-50%);
+.login {
+  top: 30%;
+  left: 50%;
+  transform: translateY(-30%);
+  transform: translateX(-50%);
+  position: absolute;
+  text-align: center;
+  border-radius: 10px;
+  width: 505px;
+  height: 400px;
+  background-color: $creamyWhite;
+  h1 {
+    color: black;
+    @include font;
+  }
+}
+
+#email {
+  @include form;
+  margin-bottom: 35px;
+}
+#password {
+  @include form;
+}
+
+.material-symbols-outlined {
+  position: relative;
+  transform: translateY(40%);
+  border-color: transparent;
+  border-bottom: solid $metalicGray 2px;
+}
+
+#btn {
+  @include button;
+  
+  .btn-ripple {
+    background: rgba(255, 255, 255, 0.3);
     position: absolute;
-    text-align: center;
-    border-radius: 10px;
-    width: 505px;
-    height: 400px;
-    background-color: $creamyWhite;
-    h1 {
-        color: black;
-        @include font
-      }
+    border-radius: 100%;
+    animation: ripple 1s;
+    transform: scale(0);
+  }
 }
 
-#email{
-    background: transparent;
-    margin-bottom: 15px;
-    width: 200px;
-    height: 30px;
-    border-color: transparent;
-    border-bottom:solid black 2px;
-    :focus{outline: none;}
+@keyframes ripple {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
-#password{
-    background: transparent;
-    width: 200px;
-    height: 30px;
-    border-color: transparent;
-    :focus{outline: none;}
-
-    border-bottom:solid black 2px;
+::placeholder {
+  @include font;
+  font-size: 15px;
 }
