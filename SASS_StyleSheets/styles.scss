@@ -4,11 +4,11 @@ body {
   background-image: url("/sources/macbookPhoto.jpg");
 }
 
-.register{
+.register {
   top: 30%;
   left: 0%;
-transform: translateY(-30%);
-transform: translateX(-100%);
+  transform: translateY(-30%);
+  transform: translateX(-100%);
   position: absolute;
   text-align: center;
   border-radius: 10px;
@@ -42,10 +42,7 @@ transform: translateX(-100%);
       transition: all 0.3s linear;
     }
   }
-
 }
-
-
 
 .login {
   top: 30%;
@@ -87,16 +84,13 @@ transform: translateX(-100%);
   }
 }
 
-
-#phone{
+#phone {
   @include form;
   margin-bottom: 15px;
-
 }
-#username{
+#username {
   @include form;
   margin-bottom: 15px;
-
 }
 #email {
   @include form;
@@ -105,7 +99,6 @@ transform: translateX(-100%);
 #password {
   @include form;
   margin-bottom: 15px;
-
 }
 
 .material-symbols-outlined {
@@ -133,6 +126,23 @@ transform: translateX(-100%);
     opacity: 0;
   }
 }
+.registerButtonSubmit {
+  @include button;
+  .btn-ripple {
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    border-radius: 100%;
+    animation: ripple 1s;
+    transform: scale(0);
+  }
+}
+
+@keyframes ripple {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 ::placeholder {
   @include font;
   font-size: 15px;
@@ -141,7 +151,6 @@ transform: translateX(-100%);
 .slideLeft {
   animation-name: slide-left;
   animation-duration: 2s;
-  /* Preserve the effect of the animation at ending */
   animation-fill-mode: forwards;
 }
 
@@ -152,18 +161,17 @@ transform: translateX(-100%);
     transform: translateY(-30%);
     transform: translateX(-50%);
   }
-  100%{
+  100% {
     top: 30%;
     left: 0%;
-  transform: translateY(-30%);
-  transform: translateX(-100%);
+    transform: translateY(-30%);
+    transform: translateX(-100%);
   }
 }
 
 .slideRight {
   animation-name: slide-right;
   animation-duration: 2s;
-  /* Preserve the effect of the animation at ending */
   animation-fill-mode: forwards;
 }
 
@@ -171,33 +179,13 @@ transform: translateX(-100%);
   0% {
     top: 30%;
     left: 0%;
-  transform: translateY(-30%);
-  transform: translateX(-100%);
+    transform: translateY(-30%);
+    transform: translateX(-100%);
   }
-  100%{
+  100% {
     top: 30%;
     left: 50%;
     transform: translateY(-30%);
     transform: translateX(-50%);
-    
   }
 }
-// top: 30%;
-//   left: 50%;
-//   transform: translateY(-30%);
-//   transform: translateX(-50%);
-//   position: absolute;
-//   text-align: center;
-//   border-radius: 10px;
-//   width: 505px;
-//   height: 400px;
-//   background-color: $creamyWhite;
-//   h1 {
-//     color: black;
-//     @include font;
-//   }
-
-//   p {
-//     color: black;
-//     @include font;
-//   }

@@ -217,6 +217,36 @@ body {
     opacity: 0;
   }
 }
+.registerButtonSubmit {
+  width: 450px;
+  height: 70px;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgb(195, 29, 207) 37%, rgb(108, 25, 183) 77%);
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  font-family: "Lilita One", cursive;
+  font-family: "Questrial", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  font-size: 25px;
+  margin-top: 35px;
+  overflow: hidden;
+}
+.registerButtonSubmit .btn-ripple {
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  border-radius: 100%;
+  animation: ripple 1s;
+  transform: scale(0);
+}
+
+@keyframes ripple {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 ::placeholder {
   font-family: "Lilita One", cursive;
   font-family: "Questrial", sans-serif;
@@ -227,7 +257,6 @@ body {
 .slideLeft {
   animation-name: slide-left;
   animation-duration: 2s;
-  /* Preserve the effect of the animation at ending */
   animation-fill-mode: forwards;
 }
 
@@ -248,7 +277,6 @@ body {
 .slideRight {
   animation-name: slide-right;
   animation-duration: 2s;
-  /* Preserve the effect of the animation at ending */
   animation-fill-mode: forwards;
 }
 
