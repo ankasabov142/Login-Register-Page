@@ -18,6 +18,26 @@ body {
     color: black;
     @include font;
   }
+
+  p{
+    color: black;
+    @include font;
+    
+  }
+  a{
+    position: absolute;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 5px;
+    transition: all 0.3s linear;
+    left: 50%;
+    transform: translateX(-50%);
+@include font;
+    &:hover{
+      transform: translate(-50%,-40%);
+      transition: all 0.3s linear;
+    }
+  }
 }
 
 #email {

@@ -20,6 +20,28 @@ body {
   font-family: "Questrial", sans-serif;
   font-family: "Work Sans", sans-serif;
 }
+.login p {
+  color: black;
+  font-family: "Lilita One", cursive;
+  font-family: "Questrial", sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+.login a {
+  position: absolute;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: all 0.3s linear;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Lilita One", cursive;
+  font-family: "Questrial", sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+.login a:hover {
+  transform: translate(-50%, -40%);
+  transition: all 0.3s linear;
+}
 
 #email {
   background: transparent;
