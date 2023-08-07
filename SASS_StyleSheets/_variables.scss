@@ -1,7 +1,9 @@
 //theme colors vars
-$primary: #326dee;
-$secondary: #1ac888;
-$error: #d32752;
-$info: #f6c31c;
-$interenso:black
+$creamyWhite:#f9f8eb;
 
+//font
+@mixin font {
+  font-family: "Lilita One", cursive;
+  font-family: "Questrial", sans-serif;
+  font-family: "Work Sans", sans-serif;
+}

@@ -1,7 +1,45 @@
-h1 {
-  color: #1ac888;
+body {
+  background-image: url("/sources/macbookPhoto.jpg");
 }
 
-h2 {
-  color: #d32752;
+.login {
+  top: 30%;
+  left: 50%;
+  transform: translateY(-30%);
+  transform: translateX(-50%);
+  position: absolute;
+  text-align: center;
+  border-radius: 10px;
+  width: 505px;
+  height: 400px;
+  background-color: #f9f8eb;
+}
+.login h1 {
+  color: black;
+  font-family: "Lilita One", cursive;
+  font-family: "Questrial", sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+
+#email {
+  background: transparent;
+  margin-bottom: 15px;
+  width: 200px;
+  height: 30px;
+  border-color: transparent;
+  border-bottom: solid black 2px;
+}
+#email :focus {
+  outline: none;
+}
+
+#password {
+  background: transparent;
+  width: 200px;
+  height: 30px;
+  border-color: transparent;
+  border-bottom: solid black 2px;
+}
+#password :focus {
+  outline: none;
 }

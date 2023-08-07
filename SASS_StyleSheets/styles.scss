@@ -1,6 +1,42 @@
-@import 'variables';
+@import "variables";
 
-h1{
-    color: $secondary;
+
+body{
+background-image: url('/sources/macbookPhoto.jpg');
+
 }
-h2{color: $error;}
+.login{
+    top: 30%;
+    left: 50%;
+    transform: translateY(-30%);
+    transform: translateX(-50%);
+    position: absolute;
+    text-align: center;
+    border-radius: 10px;
+    width: 505px;
+    height: 400px;
+    background-color: $creamyWhite;
+    h1 {
+        color: black;
+        @include font
+      }
+}
+
+#email{
+    background: transparent;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 30px;
+    border-color: transparent;
+    border-bottom:solid black 2px;
+    :focus{outline: none;}
+}
+#password{
+    background: transparent;
+    width: 200px;
+    height: 30px;
+    border-color: transparent;
+    :focus{outline: none;}
+
+    border-bottom:solid black 2px;
+}
